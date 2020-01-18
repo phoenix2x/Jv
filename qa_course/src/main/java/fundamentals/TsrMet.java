@@ -46,8 +46,11 @@ public class TsrMet {
 
 
 
-
-
+//for (int i = 1; i<charArr.length; i++) {
+//        int currNumber = Integer.parseInt(charArr[i]);
+//        int prevNumber = Integer.parseInt(charArr[i-1]);
+//
+//
 
 
 

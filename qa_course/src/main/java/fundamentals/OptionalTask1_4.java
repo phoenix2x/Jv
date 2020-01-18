@@ -21,113 +21,21 @@ public class OptionalTask1_4 {
 
 
         for (int i = 0; i < strArray.length; i++) {
-            String str = strArray[i];
-            char chArray[] = str.toCharArray();
+            char chArray[] = strArray[i].toCharArray();
 
-            int x = 0;
-            for (int j = 0; j < strArray[i].length(); j++) {
-                int[] intArray = new int[str.length()];
-                intArray[j] = Character.getNumericValue(chArray[j]);
-                x = intArray[j];
-                System.out.println(x);
-                break;
-
-            }
+             boolean flag = true;
+            for (int j = 1; j < chArray.length; j++) {
+                int currNumber = Character.getNumericValue(chArray[j]);
+                int prevNumber = Character.getNumericValue(chArray[j-1]);
 
 
+                if (currNumber> prevNumber){  flag = false; break; }
+                if (flag) {System.out.println(strArray[i]); break;}
 
-
+                }
 
             }
 
-
-
-
-
-
-
-
-
-
-//                for (int k = 1; k < intArray.length; k++) {
-//
-//
-////                    if(intArray[k] > intArray[k-1]){
-////                System.out.println(strArray[i]);
-////
-////           }
-//
-//
-//
-//
-//                }
-
-
-
-
-
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        int mas [] = {5, 2, 3, 4, 5};
-//
-//
-//        for (int i = 1; i < mas.length; i++) {
-//            if(mas[i] > mas[i-1]){
-//                System.out.println("ok");
-//
-//            } else {
-//                System.out.println("no");
-//            }
-//
-//
-//            }
-//
-//
-//
-//        boolean flag = true;
-//        for (int i = 1; i < mas.length; i++) {
-//            if(mas[i]<=mas[i-1]){
-//                flag = false;
-//                break;
-//            }
-//        }
-//        if(flag){
-//            System.out.println("Массив является строго возрастающей последовательностью");
-//        } else {
-//            System.out.println("Массив не является строго возрастающей последовательностью");
-//        }
-//
-
-
-
-
-
-
-
-
-
-
-//    public static int []  convert(String str) {
-//        char chArray[] = str.toCharArray();
-//        int[] intArray = new int[str.length()];
-//        for (int i = 0; i < intArray.length; i++) {
-//            intArray[i] = Character.getNumericValue(chArray[i]);
-//        }
-//        return intArray;
-//
-//    }
 
 }
