@@ -1,5 +1,7 @@
 package fundamentals;
 
+//Отобразить в окне консоли аргументы командной строки в обратном порядке.
+
 public class MainTask_2 {
     public static void main(String[] args) {
         System.out.print("Аргументы командной строки: ");

@@ -1,5 +1,7 @@
 package fundamentals;
 
+//Ввести целые числа как аргументы командной строки, подсчитать их сумму (произведение) и вывести результат на консоль.
+
 public class MainTask_4 {
 
     public static void main(String[] args) {

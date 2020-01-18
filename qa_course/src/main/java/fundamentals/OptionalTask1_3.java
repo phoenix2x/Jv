@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//Вывести на консоль те числа, длина которых меньше (больше) средней длины по всем числам, а также длину.
+
 
 public class OptionalTask1_3 {
     public static void main(String[] args) throws IOException {
