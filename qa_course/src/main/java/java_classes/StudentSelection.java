@@ -5,62 +5,73 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentSelection {
-    public void getListOfStudentsOfFaculty (String nameOfFaculty, Student[] students) {
+
+    public void printListOfStudentsByFaculty (String nameOfFaculty, Student[] students) {
         System.out.println(nameOfFaculty + " факультет. Список студентов: ");
-        if (!nameOfFaculty.equals("Физический") && !nameOfFaculty.equals("Биологический")) {
-            System.out.println("Такого факультета не существует!");
-        }else {
-            for (Student student: students) {
-                if (student.getFaculty().equals(nameOfFaculty)) {
-                    System.out.println(student);
-                }
+        List<Student> studentsByFaculty = new ArrayList<>();
+        for (Student student : students) {
+            if (student.getFaculty().equals(nameOfFaculty)) {
+                studentsByFaculty.add(student);
             }
+        }
+        if (!studentsByFaculty.isEmpty()){
+            for (Student student: studentsByFaculty){
+                System.out.println(student);
+            }
+        }else{
+            System.out.println("Список пуст, либо такого факультета не существует.");
         }
     }
 
-//    public void printListOfStudentsOfFaculty (String nameOfFaculty, Student[] students) {
-//        List<Student> studentsByFaculty = getListOfStudentsOfFaculty(nameOfFaculty, students);
-//        if (studentsByFaculty.isEmpty()) {
-//            System.out.println("Такого факультета не существует!");
-//        } else {
-//            studentsByFaculty.forEach(System.out::println);
-//        }
-//    }
-//
-//    public List<Student> getListOfStudentsOfFaculty (String nameOfFaculty, Student[] students) {
-//        List<Student> studentsByFaculty = new ArrayList<>();
-//        for (Student student: students) {
-//            if (student.getFaculty().equals(nameOfFaculty)) {
-//                studentsByFaculty.add(student);
-//            }
-//        }
-//    }
-
-    public void getListOfStudentsOfFacultyAndCourse (String nameOfFaculty, int course, Student[] students) {
+    public void printListOfStudentsByFacultyAndCourse (String nameOfFaculty, int course, Student[] students) {
         System.out.println(nameOfFaculty + " факультет. Курс " + course + ". Список студентов:");
-        for (Student student: students) {
+        List <Student> studentsByFacultyAndCourse = new ArrayList<>();
+        for (Student student : students) {
             if (student.getFaculty().equals(nameOfFaculty) && course == student.getCourse()) {
+                studentsByFacultyAndCourse.add(student);
+            }
+        }
+            if (!studentsByFacultyAndCourse.isEmpty()) {
+                for (Student student: studentsByFacultyAndCourse) {
+                    System.out.println(student);
+                }
+            } else {
+                System.out.println("Список пуст, либо такого факультета или группы не существует.");
+            }
+    }
+
+    public void printListOfStudentsWhoWasBornAfterYear (int year, Student[] students) {
+        System.out.println("Студенты рожденные после " + year + " года:");
+        List <Student> listOfStudentsWhoWasBornAfterYear  = new ArrayList<>();
+        for (Student student : students) {
+            int yearOfBirth = Integer.parseInt(student.getDateOfBirth().substring(0,4));
+            if (yearOfBirth > year) {
+                listOfStudentsWhoWasBornAfterYear.add(student);
+            }
+        }
+        if (!listOfStudentsWhoWasBornAfterYear.isEmpty()) {
+            for (Student student: listOfStudentsWhoWasBornAfterYear) {
                 System.out.println(student);
             }
+        } else {
+            System.out.println("Список пуст.");
         }
     }
 
-    public void listOfStudentsWhoWasBornAfterYear (int year, Student[] students) {
-        System.out.println("Студенты рожденные после " + year + " года:");
-            for (Student student : students) {
-               int yearOfBirth = Integer.parseInt(student.getDateOfBirth().substring(0,4));
-               if (yearOfBirth > year) {
-                    System.out.println(student);
-                }
-            }
-    }
-
-    public void getListOfStudyGroup (String studyGroup, Student[] students) {
+    public void printListOfStudentsByStudyGroup (String studyGroup, Student[] students) {
         System.out.println("Студенты группы " + studyGroup + ":");
-        for (Student student: students) {
+        List<Student> listOfStudentsByStudyGroup = new ArrayList<>();
+        for (Student student : students) {
             if (student.getStudyGroup().equals(studyGroup)) {
+                listOfStudentsByStudyGroup.add(student);
+            }
+        }
+        if (!listOfStudentsByStudyGroup.isEmpty()){
+            for (Student student: listOfStudentsByStudyGroup){
                 System.out.println(student);
             }
+        }else{
+            System.out.println("Список пуст, либо такой группы не существует.");
         }
     }
 }

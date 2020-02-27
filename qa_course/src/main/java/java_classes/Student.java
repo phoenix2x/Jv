@@ -13,8 +13,6 @@ public class Student {
     private int course;
     private String studyGroup;
 
-
-
     public int getId () {
         return id;
     }
@@ -113,15 +111,5 @@ public class Student {
                 ". Адресс: " + address + ". тел:" + phoneNumber + ". Факультет: " + faculty + ". Курс:" + course + ". Группа: "
                 + studyGroup + ".";
     }
-
-
-
-
-
-
-
-
-
-
 
 }

@@ -6,13 +6,13 @@ public class Main {
         CreateStudent createStudent = new CreateStudent();
         StudentSelection studentSelection = new StudentSelection();
 
-        studentSelection.getListOfStudentsOfFaculty("Биологический", createStudent.students);
+        studentSelection.printListOfStudentsByFaculty("Биологический", createStudent.students);
         System.out.println();
-        studentSelection.getListOfStudentsOfFacultyAndCourse("Биологический", 2, createStudent.students);
+        studentSelection.printListOfStudentsByFacultyAndCourse("Физический", 3, createStudent.students);
         System.out.println();
-        studentSelection.listOfStudentsWhoWasBornAfterYear(1992, createStudent.students);
+        studentSelection.printListOfStudentsWhoWasBornAfterYear(1992, createStudent.students);
         System.out.println();
-        studentSelection.getListOfStudyGroup("ФЗ-1", createStudent.students);
+        studentSelection.printListOfStudentsByStudyGroup("ФЗ-2", createStudent.students);
     }
 
 }
