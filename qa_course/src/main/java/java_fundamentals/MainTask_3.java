@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//Вывести заданное количество случайных чисел с переходом и без перехода на новую строку
+/*
+Вывести заданное количество случайных чисел с переходом и без перехода на новую строку.
+ */
 
 public class MainTask_3 {
     public static void main(String[] args) throws IOException {

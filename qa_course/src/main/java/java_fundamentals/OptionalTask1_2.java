@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//Вывести числа в порядке возрастания (убывания) значений их длины.
+/*
+Вывести числа в порядке возрастания (убывания) значений их длины.
+ */
 
 public class OptionalTask1_2 {
     public static void main(String[] args) throws IOException {
