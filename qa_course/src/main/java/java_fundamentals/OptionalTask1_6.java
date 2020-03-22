@@ -24,12 +24,12 @@ public class OptionalTask1_6 {
             for (int j = 1; j < chArray.length; j++) {
                 int currNumber = Character.getNumericValue(chArray[j]);
                 int prevNumber = Character.getNumericValue(chArray[j-1]);
-                if (currNumber <= prevNumber){  flag = false; break; }
+                if (currNumber <= prevNumber){
+                    flag = false; break; }
                 }
                 if (flag) {System.out.println( "Число, цифры в котором идут в строгом порядке возрастания: "
                         + strArray[i]); break;}
             }
-
-            }
+       }
 
 }

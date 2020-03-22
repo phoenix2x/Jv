@@ -90,6 +90,7 @@ public class Student {
         this.studyGroup = studyGroup;
     }
 
+
     public Student(int id, String secondName, String name, String middleName, String dateOfBirth, String address,
                    int phoneNumber, String faculty, int course, String studyGroup) {
         this.id = id;

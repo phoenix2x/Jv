@@ -13,12 +13,9 @@ public class MainTask_3 {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Задайте количество случаных чисел: ");
         int amountOfNumbers = Integer.parseInt(reader.readLine());
-
         int [] array = new int [amountOfNumbers];
-
         for (int i = 0; i < amountOfNumbers; i++) {
-            int random = (int) (Math.random()*(600+1)) - 400;
-            array [i] = random;
+            array [i] = (int) (Math.random()*(600+1)) - 400;
         }
         System.out.println("Введите 1, чтобы вывести числа с переходом на новую строку.\n" +
                 "Введите 2, чтобы вывести числа без перехода на новую строку.");

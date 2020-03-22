@@ -17,8 +17,7 @@ public class MainTask_4 {
             sum+=number;
             product*=number;
         }
-        System.out.println();
-        System.out.println("Сумма: " + sum);
+        System.out.println("\nСумма: " + sum);
         System.out.println("Произведение: " + product);
     }
 }

@@ -15,19 +15,16 @@ public class OptionalTask1_3 {
         int amountOfNumbers = Integer.parseInt(reader.readLine());
         String [] strArray = new String [amountOfNumbers];
         System.out.println("Введите числа: ");
-
         for (int i = 0; i < amountOfNumbers; i++) {
             String inputNumber = reader.readLine();
             strArray[i] =  inputNumber;
         }
-
         double average = 0;
         int sum = 0;
         for (int i = 0; i < strArray.length; i++) {
             sum += strArray[i].length();
             average = sum / strArray.length;
         }
-
         System.out.println("Если вы хотите вывести числа, длинна которых больше средней длинны по всем числам, то введите 1\nЕсли " +
                 "вы хотите вывести числа, длинна которых меньше средней длинны по всем числам, то введите 2");
         int choise = Integer.parseInt(reader.readLine());

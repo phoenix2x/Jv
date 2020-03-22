@@ -20,7 +20,7 @@ public class OptionalTask1_2 {
             strArray[i] =  inputNumber;
         }
         System.out.println("Если вы хотите вывести числа в порядке возрастания их длинны, то введите 1\nЕсли вы хотите " +
-                "вывести числа в порядке возрастания их длинны, то введите 2");
+                "вывести числа в порядке убывания их длинны, то введите 2");
         int choise = Integer.parseInt(reader.readLine());
         if (choise == 1) {
             for (int i = 0; i < strArray.length; i++) {
@@ -46,7 +46,7 @@ public class OptionalTask1_2 {
                     }
                 }
             }
-            System.out.println("Числа в порядке возрастания их длинны: ");
+            System.out.println("Числа в порядке убывания их длинны: ");
             for (String s : strArray) {
                 System.out.println(s);
             }
