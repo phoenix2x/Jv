@@ -34,8 +34,4 @@ public class CreateStudent {
 
 
     Student[] students = {popkov, vladov, sevastyanov, kotina, ivanov, filatova, antonova, smirnova, kurash, kemej};
-
-
-
-
 }
